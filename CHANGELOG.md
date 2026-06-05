@@ -6,6 +6,19 @@
 - **次版本号**：新增功能或显著改进（比如新增 patch、新增翻译）
 - **修订号**：Bug 修复和小调整（比如修正一条翻译）
 
+## [2.4.46] - 2026-06-05
+
+### 改进
+
+- Windows x64 native published support window 跟进 Claude Code `2.1.162`：基于 pinned Windows runner 的 PE extract / patch / repack / `--version` / display audit 证据，同步支持窗口、README / support matrix 派生产物。
+- install / doctor 输出明确区分 Claude Code 本体自动升级和中文插件自动更新，避免用户把 `DISABLE_AUTOUPDATER` 误认为由本插件兜底。
+
+### 验证
+
+- `CI workflow 26960843688`
+- `Native Latest Candidate workflow 26960840309`
+- `node --test tests/doctor.test.js tests/install-smoke.test.js tests/support-window-generation.test.js`
+
 ## [2.4.45] - 2026-06-04
 
 ### 修复
